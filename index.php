@@ -6,10 +6,12 @@ $TBS = new clsTinyButStrong();
 $TBS->Plugin(TBS_INSTALL, OPENTBS_PLUGIN); 
 
 $archivo = 'recursos/ejemplo.docx';
+//$archivo = 'recursos/plantilla.docx';
 
 $TBS->LoadTemplate($archivo, OPENTBS_ALREADY_UTF8);
 
-$TBS->MergeField('A1', 'Hola Mundo');
+$TBS->MergeField('FECHA', 'JULIO DE 2025');
+$TBS->MergeField('NOMBRE', 'CRISTIAN ENRIQUEZ');
 //print_r($TBS);
 
 $TBS->Show(OPENTBS_DOWNLOAD, 'salida.docx');
