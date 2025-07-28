@@ -10,11 +10,12 @@ $archivo = 'recursos/plantilla.docx';
 
 $TBS->LoadTemplate($archivo, OPENTBS_ALREADY_UTF8);
 
+$nombreArchivo="julio 2025";
 $TBS->MergeField('FECHA', 'JULIO DE 2025');
 $TBS->MergeField('NOMBRE', 'CRISTIAN ENRIQUEZ');
 //print_r($TBS);
 
-$TBS->Show(OPENTBS_DOWNLOAD, 'salida.docx');
+$TBS->Show(OPENTBS_DOWNLOAD, 'Informe técnico servicio MOVIL AVANZADO M2M_'.$nombreArchivo.'.docx');
 
 
 ?>
